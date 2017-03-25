@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="pl.edu.pjwstk.kalambury">
 
+    <uses-permission android:name="pl.edu.pjwstk.slowka.repository.provider.READ_DATABASE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
