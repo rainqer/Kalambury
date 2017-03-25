@@ -1,0 +1,38 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.7'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+ext {
+    kotlin_version = '1.0.4'
+    appcompat = 'com.android.support:appcompat-v7:23.2.0'
+    cardView = 'com.android.support:cardview-v7:23.2.0'
+    kotlin = "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    picasso = 'com.squareup.picasso:picasso:2.5.2'
+    retrofit = 'com.squareup.retrofit2:retrofit:2.0.0'
+    retrofitConverterGson = "com.squareup.retrofit2:converter-gson:2.0.0"
+    retrofitRx = "com.squareup.retrofit2:adapter-rxjava:2.0.0"
+    rxjava = 'io.reactivex:rxjava:1.0.15'
+    rxjavaAndroid = 'io.reactivex:rxandroid:1.0.1'
+    rxjavaAsyncUtils = 'io.reactivex:rxjava-async-util:0.21.0'
+    supportDesign = 'com.android.support:design:23.2.0'
+}
+
