@@ -13,6 +13,12 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots"
+        }
+        maven {
+            url "https://jitpack.io"
+        }
     }
 }
 
@@ -23,9 +29,11 @@ task clean(type: Delete) {
 
 ext {
     kotlin_version = '1.0.4'
-    appcompat = 'com.android.support:appcompat-v7:23.2.0'
-    cardView = 'com.android.support:cardview-v7:23.2.0'
+    appcompat = 'com.android.support:appcompat-v7:25.0.1'
+    supportDesign = 'com.android.support:design:25.0.1'
+    cardView = 'com.android.support:cardview-v7:25.0.1'
     kotlin = "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    kotterknife = 'com.jakewharton:kotterknife:0.1.0-SNAPSHOT'
     picasso = 'com.squareup.picasso:picasso:2.5.2'
     retrofit = 'com.squareup.retrofit2:retrofit:2.0.0'
     retrofitConverterGson = "com.squareup.retrofit2:converter-gson:2.0.0"
@@ -33,6 +41,5 @@ ext {
     rxjava = 'io.reactivex:rxjava:1.0.15'
     rxjavaAndroid = 'io.reactivex:rxandroid:1.0.1'
     rxjavaAsyncUtils = 'io.reactivex:rxjava-async-util:0.21.0'
-    supportDesign = 'com.android.support:design:23.2.0'
 }
 
