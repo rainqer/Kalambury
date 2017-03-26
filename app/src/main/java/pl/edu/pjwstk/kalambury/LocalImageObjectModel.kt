@@ -6,7 +6,7 @@ import android.content.UriMatcher
 import android.database.Cursor
 import android.net.Uri
 
-class LocalImageObjectRepository {
+class LocalImageObjectModel {
 
     val contentResolver: ContentResolver
     val IMAGE_OBJECT_PROVIDER_URI = IMAGE_OBJECT_URI
@@ -26,6 +26,11 @@ class LocalImageObjectRepository {
     }
 
     companion object {
+        val NAME = "ImageObjects"
+        val COLUMN_ID = "_id"
+        val COLUMN_NAME = "objectName"
+        val COLUMN_IMAGE_URL = "imageUrl"
+        val COLUMN_CATEGORY = "category"
         val COLUMN_ACCEPTED = "accepted"
         val COLUMN_KNOWN = "known"
         val COLUMNS = arrayOf("_id", "objectName", "imageUrl", "category", "accepted", "known")
